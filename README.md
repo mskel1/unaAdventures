@@ -25,3 +25,18 @@ narrow scope
 ex. on config side, different platform as service
 on environ side, another npm tool
 
+
+User story
+
+CRUD
+to start story
+click on different photos, type in name based off first letter
+
+may could do chatGTP api type + 
+
+"meet a raccoon" what do you say to him?
+<br>
+send to different page
+
+
+https://www.section.io/engineering-education/session-management-in-nodejs-using-expressjs-and-express-session/ 
