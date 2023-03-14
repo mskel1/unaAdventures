@@ -50,3 +50,4 @@ send to different page
 
 https://www.section.io/engineering-education/session-management-in-nodejs-using-expressjs-and-express-session/ 
 
+multiple different endings to saying both yes and no to the squirrel
