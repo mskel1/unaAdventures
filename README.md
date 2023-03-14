@@ -1,42 +1,40 @@
-# course-project
+# Course project: UNA Campus Adventures 🦁
 
-database name course_project <br>
-collection :user-info
+## User Story 
 
-name:
-<br>
+**As an** app user
 
-team name? app/product name? <br>
-add him as collaborator
+**I want** to click different options
 
-<br>
-wiki card, issues, add something about spring 4 (what happens next) <br>
- - something you could have done differently
- - can have dummy stuff like click to settings, imagine you're already signed in
- - should demonstrate what is on user story
- - MEEN stack
+**So that** I can have a story created for me and get a campus secret
+
+## Basic setup
+- a campus life choose your own adventure app
+- start from choosing 3 options of place on campus and each member makes a story from there
+- choose pictures each time to create the story, will have three levels
+- display the full story at the end for the user to see??
+
+story example
+
+1. Choose a place to visit on campus
+    * The fountain/Leo ⛲
+    * GUC 🥤
+    * The dorms 🛏️
+    
+2. You chose to visit the GUC and now you're hungry, what are you craving?
+    * Panda Express 🍚
+    * Moes 🌯
+
+3. Good choice, you are now full on Panda Express. As you are walking outside you meet
+   a squirrel, do you give him some of your fortune cookie? 🐿️
+    * Yes 🥠
+    * No 🗙
+
+4. You chose yes! The squirrel says thank you for some of your cookie and tells you 
+a campus secret "hidden for now"
  
- spring one turn in repo with app link to render, basic set up
- <br>
-demonstrates full data CRUD 1-3 <br>
-narrow scope
 
-+
-ex. on config side, different platform as service
-on environ side, another npm tool
+Finished. So, 'user name' you sucessfully made it to the GUC during open hours and you
+ate some great Panda Express food! You gave some of your fortune cookie to the squrrel
+outside, and he was very thankful. You received a cool campus secret! ending 1/10
 
-
-User story
-
-CRUD
-to start story
-click on different photos, type in name based off first letter
-
-may could do chatGTP api type + 
-
-"meet a raccoon" what do you say to him?
-<br>
-send to different page
-
-
-https://www.section.io/engineering-education/session-management-in-nodejs-using-expressjs-and-express-session/ 
