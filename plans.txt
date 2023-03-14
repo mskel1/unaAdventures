@@ -32,6 +32,8 @@ narrow scope
 ex. on config side, different platform as service
 on environ side, another npm tool
 
+npm install express express-session cookie-parser
+
 
 User story
 
