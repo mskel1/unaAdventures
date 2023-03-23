@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'><link rel="stylesheet" href="./styles/styles.css">
+  </head>
+  
+  <body>
+    <div id="sleep" class="step" data-x="-1000" data-y="-1500">
+
+  <h1>Welcome fellow adventurer! Where would you like to begin your journey?</h1>
+  <h2>P.S if you come along for the journey, we might find a campus secret 🤫</h2>
+
+  <a href="#lion">Leo (Lions are so cool)</a>
+  <a href="#guc">GUC (I want to make a fuel up before I do anything)</a>
+  <a href="#dorm">Dorms (I wanna catch up on some z's)</a>
+</div>
+    
+<!-- LEO -->
+<div id="lion" class="step" data-x="0" data-y="-1500" data-z="1500" style="display:none">
+  <H1>Yay! You came to see Leo!</H1>
+  <p>Looks like Leo wants to tell us a secret for visiting him.</p>
+  
+  <a href="#nope">Nope. Talking animals don't exist.</a>
+  <a href="#yeah">Yeah. I would love to hear it!</a>
+  <a href="#dorm">I wanna go take a nap.</a>
+
+</div>
+
+<!-- GUC -->
+    
+<div id="guc" class="step" data-x="0" data-y="-1500" data-z="1500">
+  <H1>Fueling up, huh? I need to as well. Lucky for us, campus has options!</h1>
+  <p>Which would you prefer: Panda or Moe's? (both are excellent choices)</p>
+    
+  <a href="#panda"><img src="photos/panda.png" id="logo"></a>
+  <a href="#moes"><img src="photos/moes.jpg" id="logo"></a>
+
+</div>
+
+
+
+<!-- MOES -->
+<div id="moes" class="step" data-x="850" data-y="3000" data-z="1000" data-rotate="90">
+ <h1>I love their burritos & bowls.</h1>
+ <p>Ooh, looks like Mario has hopped out of the wall and wants to tell us a secret! Would you like to hear it?</p>
+  
+  
+  <a href="#crazy">Are you crazy? We don't know him. No.</a>
+  <a href="#heckyes">Heck yes. I want all the juicy gossip.</a>
+  <a href="#dorm">I wanna go take a nap. All this food has made me hungry.</a>
+  
+</div>
+
+<!-- panda -->
+<div id="panda" class="step" data-x="850" data-y="3000" data-z="1000" data-rotate="90">
+ <h1>I love seeing what my fortune cookie says.</h1>
+ <p>My fortune says to talk to Princess Peach. She will jump out of the wall when we say the magic words "Abracadabra!"</p>
+ <p>Would you like to talk to Princess Peach?</p> 
+  
+  
+  <a href="#no">Who talks to a painting on the wall? No.</a>
+  <a href="#yes">It's bad luck if you don't do what the fortune says, so yes please.</a>
+  <a href="#dorm">I wanna go take a nap. All this food has made me hungry.</a>
+  
+</div>
+    
+ <div id="nope">
+  <h1>Leo is mad 😠. He's been holding this secret in forever & he's not a good secret keeper.</h1>
+  <p>You wanna change your mind?</p>
+  
+  <a href="#leo">Yes! I feel bad for upsetting Leo.</a>
+    <a href="#oak">I don't care that I made him mad. No.</a>
+</div>
+
+<div id="yes">
+  <h1>Leo is so happy!</h1>
+  <p>Leo told us a juicy secret!</p>
+  
+  <a href="#sleep">Start a new adventure!</a>
+</div>   
+    
+    
+    
+<div id="crazy">
+  <h1>Mario is sad. He never gets to hang out with new people.</h1>
+  <p>We didn't get a secret! Would you like to reconsider?</p>
+  
+  <a href="#moes">Yeah, I feel bad for making Mario sad. </a>
+    <a href="#oak">Too bad. Still no.</a>
+</div>
+
+<div id="heckyes">
+  <h1>Mario is so happy! He loves making new friends</h1>
+  <p>Mario was so grateful that he told us a secret! We're friends for life now!</p>
+  
+  <a href="#sleep">Start a new adventure!</a>
+</div>
+
+<div id="dorm">
+  <h1>Mario says to enjoy your nap. (He lowkey wants to take one too.) </h1>
+  
+  <a href="#sleep">Start a new adventure!</a>
+</div>
+    
+<div id="no">
+  <h1>Princess Peach says how rude!</h1>
+  <p>It's bad luck not to follow your fortune! Should we follow it?</p>
+  
+  <a href="#panda">Yeah, I don't want bad luck.</a>
+    <a href="#oak">I don't believe in that crap. No.</a>
+</div>
+
+<div id="yes">
+  <h1>Princess Peach is happy that we listened the fortune cookie. She didn't want us to have bad luck.</h1>
+  <p>Princess Peach told us a secret for being so brave! She said to come back soon! </p>
+  
+  <a href="#sleep">Start a new adventure!</a>
+</div>
+    
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js'></script>
+<script src="./app.js"></script>  
+    
+</body>
+</html>
