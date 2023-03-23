@@ -1,1 +1,140 @@
-<h1>hello</h1>
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'><link rel="stylesheet" href="./styles/styles.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- from user learn43 -->
+
+<div id="sleep" class="step" data-x="-1000" data-y="-1500">
+
+  <h1>Sleeping peacefully but we have a full day ahead!</h1>
+  <p>Do you want to start your day?</p>
+
+  <a href="#start">Kristina</a>
+  <!-- <button onclick="StartFunction()">Kristina</button> -->
+  <a href="#sleep">Sleep a little more</a>
+</div>
+
+<div id="start" class="step" data-x="0" data-y="-1500">
+  <H1>Hey thanks for choosing me as your character! I will help you find a campus secret.</H1>
+  <p>You are walking on campus. Where will you go first: The fountain or the GUC</p>
+
+  <!-- <p><img src="http://static.tvtropes.org/pmwiki/pub/images/Delia_Ketchum_589.jpg"></p> -->
+
+  <a href="#fountain">The fountain!</a>
+  <a href="#guc">GUC</a>
+  <a href="#sleep">Go back to your dorm</a>
+</div>
+
+<div id="fountain" class="step" data-x="0" data-y="-1500" data-z="1500" style="display:none">
+  <H1>We made it to the fountain!</h1>
+  <p>He will help you find all the Dragonballs!</p>
+
+  <a href="#oak">Okay! Go See Professor Oak</a>
+  <a href="#sleep">Go back to your dorm</a>
+
+</div>
+
+<!-- GUC choice -->
+
+<div id="guc" class="step" data-x="0" data-y="-1500" data-z="1500" style="display:none">
+    <H1>Oooh I'm hungry, are you?</h1>
+    <p>Should we eat panda express or moes?</p>
+  
+    <a href="#panda"><img src="photos/panda.png" id="logo"></a>
+    <a href="#moes"><img src="photos/moes.jpg" id="logo"></a>
+    <a href="#sleep">Go back to your dorm</a>
+  
+  </div>
+
+
+<div id="panda" class="step" data-x="850" data-y="3000" data-z="1000" data-rotate="90" style="display:none">
+  <H1>Panda Express was a great choice!</h1>
+    <p>Oh, it looks like there is a squirrel who wants a piece of our fortune cookie. Do you want to give him some?</p>
+
+  <a href="#givecookie">Yes he looks friendly!</a>
+  <a href="#ignore">No, more will come</a>
+  <a href="#sleep">Go back to your dorm</a>
+</div>
+
+<div id="moes" class="step" data-x="0" data-y="-1500" data-z="1500" style="display:none">
+    <H1>Moes was a good choice!</h1>
+    <p>Wait... is that a raccoon? He looks like he wants to tell us something, do you trust him?</p>
+  
+    <a href="#trust">Do we trust him?</a>
+    <a href="#sus">No, he looks super sus</a>
+    <a href="#sleep">Go back to your dorm</a>
+  
+  </div>
+
+<!-- panda choice -->
+
+<div id="givecookie" style="display:none">
+  <h1>Looks like he is very grateful!</h1>
+  <p>The squirrel was very friendly and gave us a campus secret!</p>
+
+  <a href="#sleep">Start over</a>
+</div>
+
+<div id="ignore" style="display:none">
+    <h1>Now the squirrel is sad :[</h1>
+    <p>We did not find a campus secret. Should we reconsider our cookie?</p>
+    
+    <a href="#panda">On second thought, he deserves the cookie.</a>
+    <a href="#pika">No, I still don't trust him</a>
+  </div>
+
+  <!-- moes choice -->
+
+  <div id="trust" class="step" data-x="0" data-y="-1500" data-z="1500" style="display:none">
+    <H1>Turns out raccoons love cheese dip! He is very grateful and gave us a campus secret! </h1>
+    <p>""</p>
+  
+    <a href="#sleep">Start over</a>
+  
+  </div>
+
+  <div id="sus" class="step" data-x="0" data-y="-1500" data-z="1500" style="display:none">
+    <H1>Too bad, we will never know if he had a secret to tell us.</h1>
+    <p>Should we try again?</p>
+  
+    <a href="#moes">Maybe he doesn't seem so bad?</a>
+    <a href="#sleep">Go back to your dorm</a>
+  
+  </div>
+
+<!-- <div id="pika">
+  <h1>I think there is one more Pokemon..</h1>
+  <p>Here is one more Pokeball. But I must warn you he is a fiesty little fella</p>
+  
+  <a href="#open-pika">Open Pokeball</a>
+    <a href="#panda">Nah.</a>
+</div>
+
+<div id="open-pika">
+  <h1>Pikachu!</h1>
+  <p>Congratuations! You recieved a Lv 5 Pikachu! Fork this pen to continue the adventure!</p>
+  
+  <a href="#sleep">Start over</a>
+</div>
+
+<div id="grass">
+  <h1>You recieved Bulbasaur</h1>
+  <P> Go grass type! I hope we don't enounter a Charmander..</p>
+  
+  <a href="#leave-town">Start our journey as a Pokemon trainer</a>
+</div> -->
+
+
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js'></script>
+<script src="./app.js"></script>
+</body>
+</html>
