@@ -1,4 +1,4 @@
-# Course project: UNA Campus Adventures 🦁
+# Course project: UNA Campus Adventures: Web-based create your own story game! 🦁
 
 ## User Story 
 
@@ -7,6 +7,13 @@
 **I want** to click different options
 
 **So that** I can have a story created for me and get a campus secret
+---------------------------------------------
+
+**As a** UNA student
+
+**I want** create my own story
+
+**So that** I can unlock a campus secret
 
 ## Basic setup
 - a campus life choose your own adventure app
