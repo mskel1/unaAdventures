@@ -7,6 +7,7 @@
 **I want** to click different options
 
 **So that** I can have a story created for me and get a campus secret
+
 ---------------------------------------------
 
 **As a** UNA student
