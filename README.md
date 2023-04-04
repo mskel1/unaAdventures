@@ -1,4 +1,4 @@
-# Course project: UNA Campus Adventures: Web-based create your own story game! 🦁
+# UNA Campus Adventures: Web-based create your own story game! 🦁
 
 ## User Story 
 
@@ -25,7 +25,9 @@
 - Project board https://github.com/users/mskel1/projects/1 
 - Wiki page https://github.com/mskel1/unaAdventures/wiki 
    * recources and references https://github.com/mskel1/unaAdventures/wiki/Reources-References
-   * meet our team https://github.com/mskel1/unaAdventures/wiki/meet-the-devs 
+   * meet our team https://github.com/mskel1/unaAdventures/wiki/meet-the-devs
+ 
+   
 
 story example
 
