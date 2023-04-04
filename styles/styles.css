@@ -2,6 +2,7 @@ html, body {
     height:100%;
     /* Disable Scroll */
     overflow:hidden;
+    background-color: #eccdf7;
   }
   
 /* div {
