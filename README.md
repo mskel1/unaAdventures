@@ -1,4 +1,4 @@
-# UNA Campus Adventures: Web-based create your own story game! 🦁
+# UNA Campus Adventures: Web-based choose your own adventure game! 🦁
 
 ## User Story 
 
