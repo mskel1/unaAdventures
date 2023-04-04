@@ -18,7 +18,6 @@
 
 ## Basic setup
 - a campus life choose your own adventure app
-- start from choosing 3 options of place on campus and each member makes a story from there
 - choose pictures each time to create the story, will have three levels
 - display the full story at the end for the user to see??
 
@@ -46,3 +45,8 @@ Finished. So, 'user name' you sucessfully made it to the GUC during open hours a
 ate some great Panda Express food! You gave some of your fortune cookie to the squrrel
 outside, and he was very thankful. You received a cool campus secret! ending 1/10
 
+CRUD operations
+create - user enters name to create their id in the database
+read - they can read and display all their secrets obtained
+update - update their secrets as they progress through the story
+delete - delete secrets so they can go back and play again
