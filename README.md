@@ -21,6 +21,11 @@
 - choose pictures each time to create the story, will have three levels
 - display the full story at the end for the user to see??
 
+## Useful links
+- Project board https://github.com/users/mskel1/projects/1 
+- Wiki page https://github.com/mskel1/unaAdventures/wiki 
+   * recources and references https://github.com/mskel1/unaAdventures/wiki/Reources-References
+
 story example
 
 1. Choose a place to visit on campus
