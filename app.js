@@ -36,7 +36,7 @@ app.get('/', async (req, res) => {
   
     //let result = await cxnDB().catch(console.error); 
   
-    res.render('views/index');
+    res.render('index');
   })
 
 
