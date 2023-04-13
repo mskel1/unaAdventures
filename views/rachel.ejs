@@ -119,17 +119,6 @@
   
   <a href="#sleep">Start a new adventure!</a>
 </div>
-
-
-<h3> Let's update the names</h3> 
-<% for (var i=0; i< nameData.length; i++ ) { %>
- <form method="POST" action="/updateName/<%= nameData[i]._id %>" style="display: inline-block">  
-   <%= nameData[i].name %> (<%= nameData[i].size %>) 
-   <input type="submit" value="update"> 
- </form>
- <br/>
-<% } %>
-
     
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js'></script>
