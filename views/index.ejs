@@ -51,11 +51,11 @@
   <% } %>
   
   
-  <h3> update name</h3> 
+  <h3> Game Status</h3> 
 <% for (var i=0; i< nameData.length; i++ ) { %>
  <form method="POST" action="/updateName/<%= nameData[i]._id %>" style="display: inline-block">  
    <%= nameData[i].name %> (<%= nameData[i].size %>) 
-   <input type="submit" value="update"> 
+   <input type="submit" value="status"> 
  </form>
  <br/>
 <% } %>
