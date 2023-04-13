@@ -12,7 +12,7 @@
 
 **As a** UNA student
 
-**I want** create my own story
+**I want** choose my own adventure
 
 **So that** I can unlock a campus secret
 
