@@ -34,8 +34,22 @@
         <input name="name" value="new name">
         <br>
         <br>
-        <input type="submit" value="add a name" />
+        <input type="submit" value="add your name to the database" />
       </form>
+
+      <form method="GET" action="/kristinaPage">
+        <input type="submit" value="Ready!" />
+      </form>
+
+<h3> delete name</h3>
+<% for (var i=0; i< nameData.length; i++ ) { %>
+  <form method="POST" action="/deleteName/<%= nameData[i]._id %>" style="display: inline-block">
+    <%= nameData[i].name %> (<%= nameData[i].size %>)
+        <input type="submit" value="delete">
+  </form>
+  <br />
+  <% } %>
+
     
      
 
@@ -46,7 +60,7 @@
         <input type="submit" value="Add Name">
         </form> -->
 
-      <button onclick="window.location.assign ='/kristina.ejs';">Ready</button>
+      <!-- <button onclick="window.location.href ='/kristina.ejs';">Ready</button> -->
 
     </div>
     <!-- <a href="kristina.ejs">Kristina</a> -->

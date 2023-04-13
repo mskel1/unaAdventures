@@ -51,6 +51,7 @@ app.get('/', async (req, res) => {
 })
 
 
+
 app.get('/mongo', async (req, res) => {
 
   // res.send("check your node console, bro");
@@ -63,22 +64,6 @@ app.get('/mongo', async (req, res) => {
 
 })
 
-
-app.get('/update', async (req, res) => {
-
-    // want to get data from the form
-    console.log("in get to slash update:", req.query.ejsFormName); 
-    myName = req.query.ejsFormName; 
-
-    // update into the db
-    client.connect; 
-    const collection = client.db("unaAdventures").collection("user-info");
-
-    await collection.insertOne({
-      name: "Joe"
-    });
-
-
 app.post('/addName', async (req, res) => {
 
   try {
@@ -87,7 +72,7 @@ app.post('/addName', async (req, res) => {
     const collection = client.db("unaAdventures").collection("user-info");
     await collection.insertOne(req.body);
       
-    res.redirect('/');
+    //return res.redirect('/kristinaPage');
   }
   catch(e){
     console.log(error)
@@ -97,7 +82,43 @@ app.post('/addName', async (req, res) => {
   }
 
 })
-  
+
+app.get('/kristinaPage', async (req, res) => {
+
+  let result = await cxnDB().catch(console.error); 
+
+  //res.redirect('/kristina')
+  res.render('kristina', {
+    nameData : result
+    });
+})
+
+
+
+app.post('/deleteName/:id', async (req, res) => {
+
+  try {
+    console.log("req.parms.id: ", req.params.id) 
+    
+    client.connect; 
+    const collection = client.db("unaAdventures").collection("user-info");
+    let result = await collection.findOneAndDelete( 
+      {
+        "_id": new ObjectId(req.params.id)
+      }
+
+    )
+    .then(result => {
+      console.log(result); 
+      res.redirect('/');
+    })
+    .catch(error => console.error(error))
+  }
+  finally{
+    //client.close()
+  }
+
+})
 
 
 
@@ -113,30 +134,6 @@ app.post('/addName', async (req, res) => {
 
 //     T.style.display = displayValue;
 // }
-  
-  
- app.post('/updateName/:id', async (req, res) => {
-
-  try {
-    console.log("req.parms.id: ", req.params.id) 
-    
-    client.connect; 
-    const collection = client.db("unaAdventures").collection("user-info");
-    let result = await collection.findOneAndUpdate( 
-      { "_id": new ObjectId(req.params.id) }, {$set: {name: "new name" }} )
-
-    .then(result => {
-      console.log(result); 
-      res.redirect('/');
-    })
-    .catch(error => console.error(error))
-  }
-  finally{
-    //client.close()
-  }
-
-})
-
 
 console.log('in the node console');
 
