@@ -14,9 +14,13 @@ const client = new MongoClient(process.env.MONGO_URI, { useNewUrlParser: true, u
 app.use(bodyParser.urlencoded({ extended: true }))
 
 app.set('view engine', 'ejs');
+app.use(express.static('public'))
+
+
+//app.use(express.static(path.join()))
 
 // app.set('styles', path.join(__dirname, 'styles'));
-// app.use(express.staticpath.join((__dirname, 'public')));
+//app.use(express.staticpath.join((__dirname, 'styles')));
 
 async function cxnDB(){
 
@@ -40,13 +44,15 @@ async function cxnDB(){
 
 //app.use(express.static(__dirname + './styles/styles.css'));
 
+//app.use(express.static("public"));
+
 app.get('/', async (req, res) => {
   //res.send('his this is she! <br/> <a href="mongo">mongo</a>');
 
   let result = await cxnDB().catch(console.error); 
 
   res.render('index', {
-  nameData : result
+  nameData : result,
   });
 })
 
@@ -83,6 +89,7 @@ app.post('/addName', async (req, res) => {
 
 })
 
+
 app.get('/kristinaPage', async (req, res) => {
 
   let result = await cxnDB().catch(console.error); 
@@ -91,6 +98,24 @@ app.get('/kristinaPage', async (req, res) => {
   res.render('kristina', {
     nameData : result
     });
+})
+
+app.get('/rachelPage', async (req, res) => {
+
+  let result = await cxnDB().catch(console.error); 
+  
+  res.render('rachel',{
+    nameData : result
+  });
+})
+
+app.get('/meghanPage', async (req, res) => {
+
+  let result = await cxnDB().catch(console.error); 
+  
+  res.render('meghan',{
+    nameData : result
+  });
 })
 
 
@@ -120,22 +145,44 @@ app.post('/deleteName/:id', async (req, res) => {
 
 })
 
-app.get('/update', async (req, res) => {
+// app.get('/update', async (req, res) => {
 
-  // want to get data from the form
-  console.log("in get to slash update:", req.query.ejsFormName); 
-  myName = req.query.ejsFormName; 
+//   // want to get data from the form
+//   console.log("in get to slash update:", req.query.ejsFormName); 
+//   myName = req.query.ejsFormName; 
 
-  // update into the db
-  client.connect; 
-  const collection = client.db("unaAdventures").collection("user-info");
+//   // update into the db
+//   client.connect; 
+//   const collection = client.db("unaAdventures").collection("user-info");
 
-  await collection.insertOne({
-    name: "Joe"
-  });
-})
+//   await collection.insertOne({
+//     name: "Joe"
+//   });
+// })
 
-  app.post('/updateName/:id', async (req, res) => {
+  // app.post('/updateName/:id', async (req, res) => {
+
+  //   try {
+  //     console.log("req.parms.id: ", req.params.id) 
+  
+  //     client.connect; 
+  //     const collection = client.db("unaAdventures").collection("user-info");
+  //     let result = await collection.findOneAndUpdate( 
+  //       { "_id": new ObjectId(req.params.id) }, {$set: {name: "new name" }} )
+  
+  //     .then(result => {
+  //       console.log(result); 
+  //       res.redirect('/');
+  //     })
+  //     .catch(error => console.error(error))
+  //   }
+  //   finally{
+  //     //client.close()
+  //   }
+  
+  // })
+
+  app.post('/updateSecret/:id', async (req, res) => {
 
     try {
       console.log("req.parms.id: ", req.params.id) 
@@ -143,7 +190,7 @@ app.get('/update', async (req, res) => {
       client.connect; 
       const collection = client.db("unaAdventures").collection("user-info");
       let result = await collection.findOneAndUpdate( 
-        { "_id": new ObjectId(req.params.id) }, {$set: {name: "new name" }} )
+        { "_id": new ObjectId(req.params.id) }, {$set: {secret: "secret +1" }} )
   
       .then(result => {
         console.log(result); 
@@ -156,6 +203,8 @@ app.get('/update', async (req, res) => {
     }
   
   })
+
+
 
 
 

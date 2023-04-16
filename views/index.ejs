@@ -3,20 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <title></title>
+  <link rel="stylesheet" href="styles.css">
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'>
-<link rel="stylesheet" href="/styles/style.css">
+<!-- <link rel="stylesheet" href="/styles/styles.css"> -->
 
 </head>
-<style>
+<!-- <style>
   body {
-    height:100%;
-    /* Disable Scroll */
-    
     background-color: #eccdf7;
   }
-</style>
+</style> -->
 <body>
 
 <h1>Hello! Welcome to choose your own adventure game: UNA</h1>
@@ -41,7 +40,7 @@
         <input type="submit" value="Ready!" />
       </form>
 
-<h3> delete name</h3>
+<h3> User Status</h3>
 <% for (var i=0; i< nameData.length; i++ ) { %>
   <form method="POST" action="/deleteName/<%= nameData[i]._id %>" style="display: inline-block">
     <%= nameData[i].name %> (<%= nameData[i].size %>)
@@ -51,14 +50,16 @@
   <% } %>
   
   
-  <h3> Game Status</h3> 
+  <h3> Secrets Status</h3> 
 <% for (var i=0; i< nameData.length; i++ ) { %>
- <form method="POST" action="/updateName/<%= nameData[i]._id %>" style="display: inline-block">  
+ <form method="POST" action="/updateSecret/<%= nameData[i]._id %>" style="display: inline-block">  
    <%= nameData[i].name %> (<%= nameData[i].size %>) 
    <input type="submit" value="status"> 
  </form>
  <br/>
 <% } %>
+
+
 
     
      

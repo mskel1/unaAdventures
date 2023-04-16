@@ -4,14 +4,30 @@
   <meta charset="UTF-8">
   <title></title>
   <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'><link rel="stylesheet" href="./styles/styles.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'>
+<!-- <link rel="stylesheet" href="./styles/styles.css"> -->
+
+<!-- <link href="/styles/styles.css" rel="stylesheet" type="text/css"> -->
+
+<style>
+  body {
+    background-color: #eccdf7;
+  }
+
+  div {
+    margin-bottom: 700px;
+  }
+
+</style>
 
 </head>
+
+
 <body>
 <!-- partial:index.partial.html -->
 <!-- from user learn43 -->
 
-<div id="sleep" class="step" data-x="-1000" data-y="-1500" style="height: 100%">
+<div id="sleep" class="step">
 
   <h1>Welcome 'username' we have a full day ahead!</h1>
   <p>Do you want to start your day?</p>
@@ -74,19 +90,25 @@
 
 <!-- panda choice -->
 
-<div id="givecookie" style="height: 100%">
+<div id="givecookie" class="step" style="height: 100%">
   <h1>Looks like he is very grateful!</h1>
   <p>The squirrel was very friendly and gave us a campus secret!</p>
 
   <a href="#sleep">Start over</a>
+  <form method="GET" action="/rachelPage">
+    <input type="submit" value="Next Adventure!" />
+  </form>
 </div>
 
-<div id="ignore" style="height: 100%">
+<div id="ignore" class="step" style="height: 100%">
     <h1>Now the squirrel is sad :[</h1>
     <p>We did not find a campus secret. Should we reconsider our cookie?</p>
     
     <a href="#panda">On second thought, he deserves the cookie.</a>
     <a href="#pika">No, I still don't trust him</a>
+    <form method="GET" action="/rachelPage">
+      <input type="submit" value="Next Adventure!" />
+    </form>
   </div>
 
   <!-- moes choice -->
@@ -96,6 +118,11 @@
     <p>""</p>
   
     <a href="#sleep">Start over</a>
+
+
+    <form method="GET" action="/rachelPage">
+      <input type="submit" value="Next Adventure!" />
+    </form>
   
   </div>
 
@@ -105,8 +132,12 @@
   
     <a href="#moes">Maybe he doesn't seem so bad?</a>
     <a href="#sleep">Go back to your dorm</a>
+    <form method="GET" action="/rachelPage">
+      <input type="submit" value="Next Adventure!" />
+    </form>
   
   </div>
+
 
   <!-- <h3>Add your secret to the database</h3> 
 <% for (var i=0; i< nameData.length; i++ ) { %>
