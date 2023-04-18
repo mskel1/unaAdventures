@@ -62,6 +62,7 @@
 - Wiki page https://github.com/mskel1/unaAdventures/wiki 
    * recources and references https://github.com/mskel1/unaAdventures/wiki/Reources-References
    * meet our team https://github.com/mskel1/unaAdventures/wiki/meet-the-devs
+   * database setup https://github.com/mskel1/unaAdventures/wiki/MONGODB-setup
 - Github pages https://mskel1.github.io/unaAdventures/
 - Render page https://una-campus-adventures.onrender.com
    
