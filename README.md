@@ -7,9 +7,9 @@
 ## This is a unique choose your own story , but why should you even use this app?
 - Have you ever been stuck finding a parking spot before class?
 - Don't have cash for the vending machine?
-- 
 
-### If you've ever been in one of those situations
+
+### If you've ever been in one of those situations, you may be able to find a simple secret that can help you out!
 
 
 
