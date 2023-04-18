@@ -196,7 +196,7 @@ app.post('/deleteName/:id', async (req, res) => {
 
   //do insert many and just add all secrets at once??
 
-  app.post('/updateSecretRaccoon/:id', async (req, res) => {
+  app.post('/updateSecret/:id', async (req, res) => {
 
     try {
       console.log("req.parms.id: ", req.params.id) 
@@ -209,6 +209,7 @@ app.post('/deleteName/:id', async (req, res) => {
       .then(result => {
         console.log(result); 
         res.redirect('/kristinaPage');
+
       })
       .catch(error => console.error(error))
     }
@@ -217,6 +218,7 @@ app.post('/deleteName/:id', async (req, res) => {
     }
   
   })
+
 
 
 

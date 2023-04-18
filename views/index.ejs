@@ -11,6 +11,9 @@
 <!-- <link rel="stylesheet" href="/styles/styles.css"> -->
 
 </head>
+
+<img src="/photos/campus.jpg" id="campus">
+
 <!-- <style>
   body {
     background-color: #eccdf7;
@@ -46,7 +49,7 @@
 <% for (var i=0; i< nameData.length; i++ ) { %>
   <form method="POST" action="/deleteName/<%= nameData[i]._id %>" style="display: inline-block">
     <%= nameData[i].name %> (<%= nameData[i].size %>)
-        <input type="submit" value="delete">
+        <input type="submit" value="status">
   </form>
   <br />
   <% } %>

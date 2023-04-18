@@ -13,6 +13,7 @@ body {
     overflow:hidden; */
     background-color: #eccdf7; 
     font-family: 'Short Stack', cursive;
+    position:absolute;
    
   }
   
@@ -30,10 +31,22 @@ body {
   }
   
   a:hover, a:active {
-    background-color: lightblue;
+    background-color: rgb(130, 1, 165);
   }
 
   #logo{
     height: 100px;
   }
+
+
+#campus{
+  height: 10cm;
+  width:100%;
+  position:static;
+}
+
+#logo{
+  height:2cm;
+  width: 2.5cm;
+}
 
