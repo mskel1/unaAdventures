@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Short+Stack&display=swap');
+
+
+/* html{
+  background-color: #9a26c4;
+    opacity: 0.2;
+    background-image: linear-gradient(#eff300 1.1px, transparent 1.1px), linear-gradient(to right, #eff300 1.1px, #9a26c4 1.1px);
+    background-size: 22px 22px;
+} */
+body {
+
+    /* height:100%;
+    overflow:hidden; */
+    background-color: #eccdf7; 
+    font-family: 'Short Stack', cursive;
+   
+  }
+  
+/* div {
+    height: 100%;
+  }  */
+
+  a:link, a:visited {
+    /* background-color: #f436de; */
+    color: rgb(3, 3, 3);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  a:hover, a:active {
+    background-color: lightblue;
+  }
+
+  #logo{
+    height: 100px;
+  }
+

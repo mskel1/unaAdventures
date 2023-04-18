@@ -5,15 +5,11 @@
   <title></title>
   <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'>
-<!-- <link rel="stylesheet" href="./styles/styles.css"> -->
+<link rel="stylesheet" href="/styles/styles.css">
 
 <!-- <link href="/styles/styles.css" rel="stylesheet" type="text/css"> -->
 
 <style>
-  body {
-    background-color: #eccdf7;
-  }
-
   div {
     margin-bottom: 700px;
   }
@@ -29,7 +25,8 @@
 
 <div id="sleep" class="step">
 
-  <h1>Welcome 'username' we have a full day ahead!</h1>
+  <h1>Welcome  we have a full day ahead!</h1>
+
   <p>Do you want to start your day?</p>
 
   <a href="#start">Let's go!</a>
@@ -62,8 +59,8 @@
     <H1>Oooh I'm hungry, are you?</h1>
     <p>Should we eat panda express or moes?</p>
   
-    <a href="#panda"><img src="photos/panda.png" id="logo"></a>
-    <a href="#moes"><img src="photos/moes.png" id="logo"></a>
+    <a href="#panda"><img src="/public/photos/panda.png" id="logo"></a>
+    <a href="#moes"><img src="/public/photos/moes.png" id="logo"></a>
     <a href="#sleep">Go back to your dorm</a>
   
   </div>
@@ -96,6 +93,16 @@
 
   <a href="#sleep">Start over</a>
   <form method="GET" action="/rachelPage">
+    <br>
+
+    <% for (var i=0; i< nameData.length; i++ ) { %>
+      <form method="POST" action="/updateSecretSquirrel/<%= nameData[i]._id %>" style="display: inline-block">  
+        <%= nameData[i].name %> (<%= nameData[i].size %>) 
+        <input type="submit" value="update your secret"> 
+      </form>
+      <br/>
+     <% } %>
+     <br>
     <input type="submit" value="Next Adventure!" />
   </form>
 </div>
@@ -121,6 +128,17 @@
 
 
     <form method="GET" action="/rachelPage">
+    </form>
+      <br>
+<form>
+      <% for (var i=0; i< nameData.length; i++ ) { %>
+        <form method="POST" action="/updateSecretRaccoon/<%= nameData[i]._id %>" style="display: inline-block">  
+          <%= nameData[i].name %> (<%= nameData[i].size %>) 
+          <input type="submit" value="update your secret"> 
+        </form>
+        <br/>
+       <% } %>
+       <br>
       <input type="submit" value="Next Adventure!" />
     </form>
   

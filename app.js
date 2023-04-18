@@ -14,7 +14,8 @@ const client = new MongoClient(process.env.MONGO_URI, { useNewUrlParser: true, u
 app.use(bodyParser.urlencoded({ extended: true }))
 
 app.set('view engine', 'ejs');
-app.use(express.static('public'))
+// app.use(express.static('public'))
+app.use(express.static(__dirname + '/public'));
 
 
 //app.use(express.static(path.join()))
@@ -98,6 +99,9 @@ app.get('/kristinaPage', async (req, res) => {
   res.render('kristina', {
     nameData : result
     });
+    // dbname = db.collection.find().sort({_id:-1});
+    // return dbname;
+
 })
 
 app.get('/rachelPage', async (req, res) => {
@@ -145,20 +149,6 @@ app.post('/deleteName/:id', async (req, res) => {
 
 })
 
-// app.get('/update', async (req, res) => {
-
-//   // want to get data from the form
-//   console.log("in get to slash update:", req.query.ejsFormName); 
-//   myName = req.query.ejsFormName; 
-
-//   // update into the db
-//   client.connect; 
-//   const collection = client.db("unaAdventures").collection("user-info");
-
-//   await collection.insertOne({
-//     name: "Joe"
-//   });
-// })
 
   // app.post('/updateName/:id', async (req, res) => {
 
@@ -182,7 +172,31 @@ app.post('/deleteName/:id', async (req, res) => {
   
   // })
 
-  app.post('/updateSecret/:id', async (req, res) => {
+  // app.post('/updateSecret/:id', async (req, res) => {
+
+  //   try {
+  //     console.log("req.parms.id: ", req.params.id) 
+  
+  //     client.connect; 
+  //     const collection = client.db("unaAdventures").collection("user-info");
+  //     let result = await collection.findOneAndUpdate( 
+  //       { "_id": new ObjectId(req.params.id) }, {$set: {secret: "you can park anywhere on campus after 4:30" }} )
+  
+  //     .then(result => {
+  //       console.log(result); 
+  //       res.redirect('/');
+  //     })
+  //     .catch(error => console.error(error))
+  //   }
+  //   finally{
+  //     //client.close()
+  //   }
+  
+  // })
+
+  //do insert many and just add all secrets at once??
+
+  app.post('/updateSecretRaccoon/:id', async (req, res) => {
 
     try {
       console.log("req.parms.id: ", req.params.id) 
@@ -190,11 +204,11 @@ app.post('/deleteName/:id', async (req, res) => {
       client.connect; 
       const collection = client.db("unaAdventures").collection("user-info");
       let result = await collection.findOneAndUpdate( 
-        { "_id": new ObjectId(req.params.id) }, {$set: {secret: "secret +1" }} )
+        { "_id": new ObjectId(req.params.id) }, {$set: {secret: "you can park anywhere on campus after 4:30" }} )
   
       .then(result => {
         console.log(result); 
-        res.redirect('/');
+        res.redirect('/kristinaPage');
       })
       .catch(error => console.error(error))
     }
@@ -203,8 +217,6 @@ app.post('/deleteName/:id', async (req, res) => {
     }
   
   })
-
-
 
 
 
