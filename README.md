@@ -3,10 +3,16 @@
 ## This app will allow you to get some inside secrets that you may not have known about UNA!
 
 <p>
-<img src="https://user-images.githubusercontent.com/111464160/232665434-b955b753-ed34-4a35-931d-0871d47cb2f4.png" width="200" height="200" />
-➡️
-<img src="https://user-images.githubusercontent.com/111464160/232883762-8a5d8aaf-aae0-48c0-9b28-2376d199a123.png" width="250" height="200" />
+<img src="https://user-images.githubusercontent.com/111464160/232665434-b955b753-ed34-4a35-931d-0871d47cb2f4.png" width="250" height="250" />
+
+<img src="https://user-images.githubusercontent.com/111464160/232887238-74836dd6-2cac-47a6-9165-11f8cf7fef5d.gif" width = "250" />
+
+<img src="https://user-images.githubusercontent.com/111464160/232883762-8a5d8aaf-aae0-48c0-9b28-2376d199a123.png" width="325" height="250" />
+  
+
 </p>
+
+
 
 ## This is a unique choose your own story , but why should you even use this app?
 - Have you ever been stuck finding a parking spot before class? 🚗
