@@ -4,8 +4,11 @@
 
 <img src="https://user-images.githubusercontent.com/111464160/232665434-b955b753-ed34-4a35-931d-0871d47cb2f4.png" width="200" height="200" />
 
-# some things you can expect:
-- j
+# This is a unique choose your own story only for UNA. Why should you even use this app?
+- Have you ever been stuck finding a parking spot before class?
+- Don't have cash for the vending machine?
+
+
 
 
 
