@@ -21,7 +21,7 @@
 1. On the homepage you can either create a new user or check your status so far if already played!
 2. Click ready to start the adventure
 3. Move through the options and create your own story to unlock secrets along the way
-4. Once finished with the first secrets, click nexr adventure to move on and create another story
+4. Once finished with the first secrets, click next adventure to move on and create another story
 5. There are 3 story pages in total with 6 secrets to unlock! 🔐
 6. In the end, you will be able to view all your secrets collected!
 
