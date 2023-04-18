@@ -1,5 +1,34 @@
 # UNA Campus Adventures: Web-based choose your own adventure game! 🦁
 
+## Want to learn more about UNA? This app will allow you to get some inside secrets that you may not have known about campus!
+
+<img src="https://user-images.githubusercontent.com/111464160/232665434-b955b753-ed34-4a35-931d-0871d47cb2f4.png" width="200" height="200" />
+
+# some things you can expect:
+- j
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## User Story 
 
 **As an** app user
