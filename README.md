@@ -1,12 +1,15 @@
 # UNA Campus Adventures: Web-based choose your own adventure game! 🦁
 
-## Want to learn more about UNA? This app will allow you to get some inside secrets that you may not have known about campus!
+## This app will allow you to get some inside secrets that you may not have known about UNA!
 
 <img src="https://user-images.githubusercontent.com/111464160/232665434-b955b753-ed34-4a35-931d-0871d47cb2f4.png" width="200" height="200" />
 
-# This is a unique choose your own story only for UNA. Why should you even use this app?
+## This is a unique choose your own story , but why should you even use this app?
 - Have you ever been stuck finding a parking spot before class?
 - Don't have cash for the vending machine?
+- 
+
+### If you've ever been in one of those situations
 
 
 
@@ -14,20 +17,8 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<br>
+<br>
 
 
 
