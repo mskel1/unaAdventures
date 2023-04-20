@@ -23,7 +23,10 @@
 <body>
 
   <div class="container">
+    <div class="card">
 <h1>Hello! Welcome to choose your own adventure game: UNA</h1>
+<h3>This is a game that let's you click through prompts to choose your own story while visiting UNA's campus! You will be able to unlock secrets that you may not know about UNA.</h3>
+</div>
 <!-- <div class="row">
   <div class="col-sm-4">
 <div class="card" style="width: 18rem;">
@@ -32,9 +35,9 @@
       <div class="input-group mb-3 input-group-sm">
         <input type="text" class="form-control">
       </div> -->
-
+      <br>
       <form method="POST" action="/addName">
-        <label for="name">Enter your name and click ready when done to start your story!</label>
+        <label for="name">To begin your adventure, please enter your name unless you are an existing user then you can check your status below.</label>
         <input name="name" placeholder="new name">
         <br>
         <br>
@@ -43,6 +46,7 @@
       <br>
 
       <form method="GET" action="/kristinaPage">
+        <p>If you are a new user and ready to start your adventure click below!</p>
         <input type="submit" value="Ready!" />
       </form>
       <br>
@@ -51,7 +55,7 @@
 <div class="container">
 
   <div class="row">
-      <h3> Already a user? Check your status</h3>
+      <h3> Already a user? Check your status (update)</h3>
       <% for (var i=0; i< nameData.length; i++ ) { %>
         <form method="POST" action="/updateSecret/<%= nameData[i]._id %>" style="display: inline-block">
           <%= nameData[i].name %> (<%= nameData[i].size %>)
@@ -64,7 +68,7 @@
 
 <div class="row">
 
-<h3> Already played and want to start over? Change your status!</h3>
+<h3> Already played and want to start over? Change your status! (delete)</h3>
 <% for (var i=0; i< nameData.length; i++ ) { %>
   <form method="POST" action="/deleteName/<%= nameData[i]._id %>" style="display: inline-block">
     <%= nameData[i].name %> (<%= nameData[i].size %>)
