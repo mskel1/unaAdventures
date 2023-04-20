@@ -9,14 +9,12 @@ const { MongoClient, ServerApiVersion } = require('mongodb');
 const path = require('path');
 // npm i path download!!^^
 
-
 const client = new MongoClient(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 app.use(bodyParser.urlencoded({ extended: true }))
 
 app.set('view engine', 'ejs');
 // app.use(express.static('public'))
 app.use(express.static(__dirname + '/public'));
-
 
 //app.use(express.static(path.join()))
 
@@ -52,12 +50,15 @@ app.get('/', async (req, res) => {
 
   let result = await cxnDB().catch(console.error); 
 
+  console.log(result); 
+
+
   res.render('index', {
   nameData : result,
   });
 })
 
-
+// app.get('/update')
 
 app.get('/mongo', async (req, res) => {
 
@@ -90,7 +91,6 @@ app.post('/addName', async (req, res) => {
   }
 
 })
-
 
 app.get('/kristinaPage', async (req, res) => {
 
@@ -197,20 +197,21 @@ app.post('/deleteName/:id', async (req, res) => {
 
   //do insert many and just add all secrets at once??
 
-  app.post('/updateSecret/:id', async (req, res) => {
+  app.post('/updateSecret/', async (req, res) => {
 
     try {
-      console.log("req.parms.id: ", req.params.id) 
+      console.log("req.body.id: ", req.body.id) 
+      console.log("req.body.newSecret: ", req.body.newSecret) 
   
       client.connect; 
       const collection = client.db("unaAdventures").collection("user-info");
       let result = await collection.findOneAndUpdate( 
-        { "_id": new ObjectId(req.params.id) }, {$set: {secret: "you can park anywhere on campus after 4:30" }} )
+        { "_id": new ObjectId(req.body.id) }, {$push: {secrets: req.body.newSecret }} )
   
       .then(result => {
-        console.log(result); 
+        // console.log(result); 
         res.redirect('/');
-        return secret;
+        //return secret;
 
       })
       .catch(error => console.error(error))

@@ -3,27 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <title></title>
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'>
-<link rel="stylesheet" href="/styles/styles.css">
-<!-- <link rel="stylesheet" href="/styles/styles.css"> -->
-
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'>
+  <!-- <link rel="stylesheet" href="/styles/styles.css"> -->
 </head>
 
-<img src="/photos/campus.jpg" id="campus">
+<body class="container">
 
+  
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <img src="/photos/campus.jpg" id="campus">
+    </div>
+    <div class="col-md-8 offset-md-2">
+      <h1>Hello! Welcome to choose your own adventure game: UNA</h1>
 
-<!-- <style>
-  body {
-    background-color: #eccdf7;
-  }
-</style> -->
-<body>
+    </div>
+  </div> 
+    
 
-  <div class="container">
-<h1>Hello! Welcome to choose your own adventure game: UNA</h1>
 <!-- <div class="row">
   <div class="col-sm-4">
 <div class="card" style="width: 18rem;">
@@ -33,6 +32,9 @@
         <input type="text" class="form-control">
       </div> -->
 
+      <div class="row">
+
+      
       <form method="POST" action="/addName">
         <label for="name">Enter your name and click ready when done to start your story!</label>
         <input name="name" placeholder="new name">
@@ -47,6 +49,51 @@
       </form>
       <br>
       </div>
+    </div>
+
+
+<div class="row">
+
+
+  
+      
+    
+  
+  <% for (var i=0; i< nameData.length; i++ ) { %>
+  <div class="col-md-6">
+    <div class="card mt-2">
+      <div class="card-body">
+        <h4 class="card-title">Player: <%= nameData[i].name %></h4>
+        <p class="card-text">Player ID: <%= nameData[i]._id %></p>
+        <p class="card-text">Secret: <%= nameData[i].secret %></p>        
+        <p class="card-text">Secrets: <%= nameData[i].secrets %></p>        
+
+        <form method="POST" action="/updateSecret/" style="display: inline-block">
+          <input type="hidden" name="id" value="<%= nameData[i]._id %>">
+          <input name="newSecret" value="new temp secret">
+          <button class="btn btn-primary">upadfaa secete </button>
+        </form>
+        
+          
+          
+        
+
+        <form method="POST" action="/deleteName/<%= nameData[i]._id %>" style="display: inline-block">
+          <button class="btn btn-primary">DLELTE</button>
+        </form>
+
+        
+
+     </div>
+    </div>
+  </div>
+  <% } %>
+
+
+</div>
+
+
+
 
 <div class="container">
 
@@ -107,12 +154,10 @@
   <a href="https://github.com/mskel1/unaAdventures/wiki/meet-the-devs" target="_blank">Meet the devs: Wiki</a>
 </div>
 
-
-
-
-
-
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js'></script><script  src="./scripts/script.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js'></script>
+<script  src="/scripts/script.js"></script>
 
-</body></html>
+</body>
+
+</html>
