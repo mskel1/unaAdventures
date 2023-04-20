@@ -79,7 +79,8 @@ app.post('/addName', async (req, res) => {
     const collection = client.db("unaAdventures").collection("user-info");
     await collection.insertOne(req.body);
       
-    //return res.redirect('/kristinaPage');
+    //allows the page to refresh auto
+    res.redirect('/');
   }
   catch(e){
     console.log(error)
@@ -208,7 +209,8 @@ app.post('/deleteName/:id', async (req, res) => {
   
       .then(result => {
         console.log(result); 
-        res.redirect('/kristinaPage');
+        res.redirect('/');
+        return secret;
 
       })
       .catch(error => console.error(error))
@@ -219,7 +221,7 @@ app.post('/deleteName/:id', async (req, res) => {
   
   })
 
-
+ 
 
 
 /* <form action="FirstPage.html">

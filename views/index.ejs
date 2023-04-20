@@ -14,6 +14,7 @@
 
 <img src="/photos/campus.jpg" id="campus">
 
+
 <!-- <style>
   body {
     background-color: #eccdf7;
@@ -21,6 +22,7 @@
 </style> -->
 <body>
 
+  <div class="container">
 <h1>Hello! Welcome to choose your own adventure game: UNA</h1>
 <!-- <div class="row">
   <div class="col-sm-4">
@@ -33,10 +35,10 @@
 
       <form method="POST" action="/addName">
         <label for="name">Enter your name and click ready when done to start your story!</label>
-        <input name="name" value="new name">
+        <input name="name" placeholder="new name">
         <br>
         <br>
-        <input type="submit" value="add your name to the database" />
+        <input type="submit" value="add your name" />
       </form>
       <br>
 
@@ -44,25 +46,39 @@
         <input type="submit" value="Ready!" />
       </form>
       <br>
+      </div>
 
-<h3> Already a user? Check your status</h3>
+<div class="container">
+
+  <div class="row">
+      <h3> Already a user? Check your status</h3>
+      <% for (var i=0; i< nameData.length; i++ ) { %>
+        <form method="POST" action="/updateSecret/<%= nameData[i]._id %>" style="display: inline-block">
+          <%= nameData[i].name %> (<%= nameData[i].size %>)
+              <input type="submit" value="see status">
+        </form>
+        <br />
+        <% } %>
+</div>
+<br>
+
+<div class="row">
+
+<h3> Already played and want to start over? Change your status!</h3>
 <% for (var i=0; i< nameData.length; i++ ) { %>
   <form method="POST" action="/deleteName/<%= nameData[i]._id %>" style="display: inline-block">
     <%= nameData[i].name %> (<%= nameData[i].size %>)
-        <input type="submit" value="status">
+        <input type="submit" value="change status">
   </form>
   <br />
   <% } %>
+</div>
+
+</div>
+<!-- closing container -->
   
   
-  <!-- <h3> Secrets Status</h3> 
-<% for (var i=0; i< nameData.length; i++ ) { %>
- <form method="POST" action="/updateSecret/<%= nameData[i]._id %>" style="display: inline-block">  
-   <%= nameData[i].name %> (<%= nameData[i].size %>) 
-   <input type="submit" value="status"> 
- </form>
- <br/>
-<% } %> -->
+
 
 
 
@@ -82,6 +98,13 @@
     <!-- <a href="kristina.ejs">Kristina</a> -->
   </div>
 </div>
+</div>
+
+<br>
+
+<div class="footer">
+  <p>Devs: Kristina Williams, Meghan Skelton, Rachel Thompson</p>
+  <a href="https://github.com/mskel1/unaAdventures/wiki/meet-the-devs" target="_blank">Meet the devs: Wiki</a>
 </div>
 
 
