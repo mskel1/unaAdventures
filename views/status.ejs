@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'>
+<link rel="stylesheet" href="/styles/styles.css">
+<!-- <link rel="stylesheet" href="/styles/styles.css"> -->
+
+</head>
+
+<body class="container">
+
+    <form method="GET" action="/indexPage">
+        <input type="submit" value="go back home" />
+      </form>
+
+<div class="row">
+    <% for (var i=0; i< nameData.length; i++ ) { %>
+    <div class="col-md-6">
+      <div class="card mt-2">
+        <div class="card-body">
+          <h4 class="card-title">Player: <%= nameData[i].name %></h4>
+          <p class="card-text" hidden>Player ID: <%= nameData[i]._id %></p>        
+          <p class="card-text">Secrets: <%= nameData[i].secrets %></p>        
+          <form method="POST" action="/updateSecret/" style="display: inline-block">
+            <input type="hidden" name="id" value="<%= nameData[i]._id %>">
+            <input name="newSecret" placeholder="secret obtained">
+            <button id="button" class="btn btn-primary">update secret </button>
+          </form>
+          
+          <form method="POST" action="/deleteName/<%= nameData[i]._id %>" style="display: inline-block">
+            <button id="button" class="btn btn-primary">Delete</button>
+          </form>
+          
+       </div>
+      </div>
+    </div>
+    <% } %>
+  
+  
+  </div>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js'></script><script  src="./scripts/script.js"></script>
+
+</body></html>

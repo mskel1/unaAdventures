@@ -18,11 +18,6 @@ app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 
 
-//app.use(express.static(path.join()))
-
-// app.set('styles', path.join(__dirname, 'styles'));
-//app.use(express.staticpath.join((__dirname, 'styles')));
-
 async function cxnDB(){
 
   try{
@@ -43,9 +38,7 @@ async function cxnDB(){
   }
 }
 
-//app.use(express.static(__dirname + './styles/styles.css'));
 
-//app.use(express.static("public"));
 
 app.get('/', async (req, res) => {
   //res.send('his this is she! <br/> <a href="mongo">mongo</a>');
@@ -61,13 +54,11 @@ app.get('/', async (req, res) => {
 
 app.get('/mongo', async (req, res) => {
 
-  // res.send("check your node console, bro");
 
   let result = await cxnDB().catch(console.error); 
 
   console.log('in get to slash mongo', result[2].username); 
-
-  // res.send(`here ya go, joe. ${ result[2].username }` ); 
+ 
 
 })
 
@@ -91,36 +82,41 @@ app.post('/addName', async (req, res) => {
 
 })
 
-
-app.get('/kristinaPage', async (req, res) => {
+app.get('/indexPage', async (req, res) => {
 
   let result = await cxnDB().catch(console.error); 
 
-  //res.redirect('/kristina')
-  res.render('kristina', {
+  
+  res.render('index', {
     nameData : result
     });
-    // dbname = db.collection.find().sort({_id:-1});
-    // return dbname;
+
 
 })
 
-app.get('/rachelPage', async (req, res) => {
+
+app.get('/storyPage', async (req, res) => {
 
   let result = await cxnDB().catch(console.error); 
+
   
-  res.render('rachel',{
+  res.render('story', {
     nameData : result
-  });
+    });
+
+
 })
 
-app.get('/meghanPage', async (req, res) => {
+app.get('/statusPage', async (req, res) => {
 
   let result = await cxnDB().catch(console.error); 
+
   
-  res.render('meghan',{
+  res.render('status', {
     nameData : result
-  });
+    });
+
+
 })
 
 
@@ -140,7 +136,7 @@ app.post('/deleteName/:id', async (req, res) => {
     )
     .then(result => {
       console.log(result); 
-      res.redirect('/');
+      res.redirect('/status');
     })
     .catch(error => console.error(error))
   }
@@ -151,66 +147,24 @@ app.post('/deleteName/:id', async (req, res) => {
 })
 
 
-  // app.post('/updateName/:id', async (req, res) => {
-
-  //   try {
-  //     console.log("req.parms.id: ", req.params.id) 
-  
-  //     client.connect; 
-  //     const collection = client.db("unaAdventures").collection("user-info");
-  //     let result = await collection.findOneAndUpdate( 
-  //       { "_id": new ObjectId(req.params.id) }, {$set: {name: "new name" }} )
-  
-  //     .then(result => {
-  //       console.log(result); 
-  //       res.redirect('/');
-  //     })
-  //     .catch(error => console.error(error))
-  //   }
-  //   finally{
-  //     //client.close()
-  //   }
-  
-  // })
-
-  // app.post('/updateSecret/:id', async (req, res) => {
-
-  //   try {
-  //     console.log("req.parms.id: ", req.params.id) 
-  
-  //     client.connect; 
-  //     const collection = client.db("unaAdventures").collection("user-info");
-  //     let result = await collection.findOneAndUpdate( 
-  //       { "_id": new ObjectId(req.params.id) }, {$set: {secret: "you can park anywhere on campus after 4:30" }} )
-  
-  //     .then(result => {
-  //       console.log(result); 
-  //       res.redirect('/');
-  //     })
-  //     .catch(error => console.error(error))
-  //   }
-  //   finally{
-  //     //client.close()
-  //   }
-  
-  // })
-
   //do insert many and just add all secrets at once??
 
-  app.post('/updateSecret/:id', async (req, res) => {
+  app.post('/updateSecret/', async (req, res) => {
 
     try {
-      console.log("req.parms.id: ", req.params.id) 
+      console.log("req.body.id: ", req.body.id) 
+      console.log("req.body.newSecret: ", req.body.newSecret) 
   
       client.connect; 
       const collection = client.db("unaAdventures").collection("user-info");
       let result = await collection.findOneAndUpdate( 
-        { "_id": new ObjectId(req.params.id) }, {$set: {secret: "you can park anywhere on campus after 4:30" }} )
+        { "_id": new ObjectId(req.body.id) }, {$push: {secrets: req.body.newSecret }} )
   
+
       .then(result => {
-        console.log(result); 
-        res.redirect('/');
-        return secret;
+        // console.log(result); 
+        res.redirect('/status');
+        //return secret;
 
       })
       .catch(error => console.error(error))
@@ -223,19 +177,6 @@ app.post('/deleteName/:id', async (req, res) => {
 
  
 
-
-/* <form action="FirstPage.html">
-    <button type="button" href="kristina.html" class="btn">Basic</button>
-</form> }*/
-
-// function StartFunction() {
-//     var T = document.getElementById("start"),
-//         displayValue = "";
-//     if (T.style.display == "")
-//         displayValue = "none";
-
-//     T.style.display = displayValue;
-// }
 
 console.log('in the node console');
 

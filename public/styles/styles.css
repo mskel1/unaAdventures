@@ -34,11 +34,6 @@ body {
     background-color: rgb(130, 1, 165);
   }
 
-  #logo{
-    height: 100px;
-  }
-
-
 #campus{
   height: 10cm;
   width:100%;
@@ -52,6 +47,21 @@ body {
 /* div{
   display:none;
 } */
+
+.card{
+  padding:.5cm;
+  background-color: rgb(251, 253, 209);
+}
+
+#button{
+  background-color: rgb(130, 1, 165);
+  border:rgb(130, 1, 165);
+}
+
+#button:hover {
+  background-color: #eccdf7;
+  transition:.2s;
+}
 
 .footer{
   left: 0;
