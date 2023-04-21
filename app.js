@@ -29,7 +29,6 @@ async function cxnDB(){
     client.connect; 
     const collection = client.db("unaAdventures").collection("user-info");
 
-    // const collection = client.db("papa").collection("dev-profiles");
     const result = await collection.find().toArray();
     //const result = await collection.findOne(); 
     console.log("cxnDB result: ", result);
@@ -54,6 +53,7 @@ app.get('/', async (req, res) => {
 
   res.render('index', {
   nameData : result,
+  secretData : secret,
   });
 })
 
@@ -67,7 +67,6 @@ app.get('/mongo', async (req, res) => {
 
   console.log('in get to slash mongo', result[2].username); 
 
-  // res.send(`here ya go, joe. ${ result[2].username }` ); 
 
 })
 
@@ -220,6 +219,8 @@ app.post('/deleteName/:id', async (req, res) => {
     }
   
   })
+
+  
 
  
 

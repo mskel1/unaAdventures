@@ -25,6 +25,18 @@
 
 <div class="container">
 
+  <!-- update all secrets to database -->
+  <div class="row">
+    <h3>  (update)</h3>
+    <% for (var i=0; i< nameData.length; i++ ) { %>
+      <form method="POST" action="/updateSecret/<%= nameData[i]._id %>" style="display: inline-block">
+        <%= nameData[i].name %> (<%= nameData[i].size %>)
+            <input type="submit" value="see status">
+      </form>
+      <br />
+      <% } %>
+</div>
+
 <div class="row">
 <div id="sleep" class="step">
 
@@ -181,6 +193,8 @@
   
   </div>
   </div>
+
+
 
 <!-- closing the container -->
 </div>
