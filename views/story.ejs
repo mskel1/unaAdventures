@@ -26,11 +26,11 @@
 
 
     <form method="GET" action="/statusPage">
-      <input type="submit" value="Check your status" />
+      <input type="submit" value="check your status" />
     </form>
     <br>
     <form method="GET" action="/">
-      <input type="submit" value="Back to start page" />
+      <input type="submit" value="back to start page" />
     </form>
     <br>
 
@@ -44,7 +44,7 @@
 
   <h1>Welcome  we have a full day ahead!</h1>
   <div id="instructions" class="card">
-  <p>Story process: Please look at the prompt and chose your won adventure! You will be able to find 2 secrets about campus. When you find a secret, you can click the see status button to add your secret or continue on.</p>
+  <p>Story process: Please look at the prompt and chose your own adventure! You will be able to find 2 secrets about campus, 1 tip, and 1 quick secret! When you find a secret, you can click the "update ym secrets" button to add your secret or continue on.</p>
   </div>
   <br>
 
@@ -90,11 +90,11 @@
     
       <a href="#sleep">Start over</a>
       <form method="GET" action="/statusPage">
-        <input type="submit" value="Update my secrets" />
+        <input type="submit" value="update my secrets" />
       </form>
       <form method="GET" action="/">
          <br>
-        <input type="submit" value="Back home" />
+        <input type="submit" value="back home" />
         </form>
     
     </div>
@@ -108,11 +108,11 @@
     
         <a href="#sleep">Start over</a>
         <form method="GET" action="/statusPage">
-          <input type="submit" value="Update my secrets" />
+          <input type="submit" value="update my secrets" />
         </form>
         <form method="GET" action="/">
            <br>
-          <input type="submit" value="Back home" />
+          <input type="submit" value="back home" />
           </form>
         
     
@@ -148,7 +148,7 @@
     <H1>Moes was a good choice!</h1>
     <p>Wait... is that a raccoon? He looks like he wants to tell us something, do you trust him?</p>
   
-    <a href="#trust">Do we trust him?</a>
+    <a href="#trust">Yes of course, I always trust raccoons</a>
     <a href="#sus">No, he looks super sus</a>
     <a href="#sleep">Go back to your dorm</a>
   
@@ -170,12 +170,13 @@
  
 
   <a href="#sleep">Start over</a>
+  
   <form method="GET" action="/statusPage">
-    <input type="submit" value="Update my secrets" />
+    <input type="submit" value="update my secrets" />
   </form>
   <form method="GET" action="/">
      <br>
-    <input type="submit" value="Back home" />
+    <input type="submit" value="back home" />
     </form>
 </div>
 </div>
@@ -185,11 +186,13 @@
     <h1>Now the squirrel is sad :[</h1>
     <p>We did not find a campus secret. Should we reconsider our cookie?</p>
     
-    <a href="#panda">On second thought, he deserves the cookie.</a>
-    <a href="#pika">No, I still don't trust him</a>
-    <!-- <form method="GET" action="/rachelPage">
-      <input type="submit" value="Next Adventure!" />
-    </form> -->
+    <a href="#givecookie">On second thought, he deserves the cookie.</a>
+    <a href="#sleep">No, I still don't trust him</a>
+
+    <form method="GET" action="/">
+       <br>
+      <input type="submit" value="back home" />
+      </form>
   </div>
   </div>
 
@@ -201,11 +204,11 @@
   
     <a href="#sleep">Start over</a>
     <form method="GET" action="/statusPage">
-      <input type="submit" value="Update my secrets" />
+      <input type="submit" value="update my secrets" />
     </form>
     <form method="GET" action="/">
        <br>
-      <input type="submit" value="Back home" />
+      <input type="submit" value="back home" />
       </form>
 
     
@@ -224,11 +227,18 @@
     <p>Should we try again?</p>
   
     <a href="#moes">Maybe he doesn't seem so bad?</a>
-    <a href="#sleep">Go back to your dorm</a>
+    <a href="#sleep">Start over</a>
+
+    <form method="GET" action="/">
+       <br>
+      <input type="submit" value="back home" />
+      </form>
 
   
   </div>
   </div>
+
+   
 
 <!-- closing the container and col -->
 </div>

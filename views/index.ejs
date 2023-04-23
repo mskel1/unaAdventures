@@ -23,6 +23,9 @@
     </div>
     <div class="col-md-8 offset-md-2">
       <h1>Hello! Welcome to choose your own adventure game: UNA</h1>
+      <p id="explain">
+        This story game will allow you to find secrets about UNA while deciding what to do around campus! <br><br> To begin, please enter your name and click "ready"  to start your adventure. <br><br> If you have already played and want to see your secrets, click the "check you status" to see/update your secrets.
+      </p>
 
     </div>
   </div> 
@@ -33,6 +36,7 @@
         <div class="card">
       <form method="POST" action="/addName">
         <label for="name">Enter your name and click ready when done to start your story!</label>
+        
         <input id="userInput" name="name" placeholder="new name">
         <br>
         <br>
@@ -41,11 +45,11 @@
       <br>
 
       <form method="GET" action="/storyPage">
-        <input type="submit" value="Ready!" />
+        <input type="submit" value="ready!" />
       </form>
       <br>
       <form method="GET" action="/statusPage">
-        <input type="submit" value="Check your status" />
+        <input type="submit" value="check your status" />
       </form>
       </div>
     </div>
