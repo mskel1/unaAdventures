@@ -44,11 +44,10 @@ body {
   width: 2.5cm;
 }
 
-input{
+/* input{
   background-color: rgb(130, 1, 165);
   color:white;
-
-}
+} */
 
 #userInput{
   background-color: white;
