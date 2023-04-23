@@ -17,6 +17,10 @@
     <form method="GET" action="/indexPage">
         <input type="submit" value="go back home" />
       </form>
+      <br>
+      <form method="GET" action="/storyPage">
+        <input type="submit" value="back to the story" />
+      </form>
 
 <div class="row">
     <% for (var i=0; i< nameData.length; i++ ) { %>
@@ -28,12 +32,12 @@
           <p class="card-text">Secrets: <%= nameData[i].secrets %></p>        
           <form method="POST" action="/updateSecret/" style="display: inline-block">
             <input type="hidden" name="id" value="<%= nameData[i]._id %>">
-            <input name="newSecret" placeholder="secret obtained">
+            <input id="userInput" name="newSecret" placeholder="secret obtained">
             <button id="button" class="btn btn-primary">update secret </button>
           </form>
           
           <form method="POST" action="/deleteName/<%= nameData[i]._id %>" style="display: inline-block">
-            <button id="button" class="btn btn-primary">Delete</button>
+            <button id="button" class="btn btn-primary">Delete User</button>
           </form>
           
        </div>

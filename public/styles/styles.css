@@ -44,13 +44,24 @@ body {
   width: 2.5cm;
 }
 
-/* div{
-  display:none;
-} */
+input{
+  background-color: rgb(130, 1, 165);
+  color:white;
+
+}
+
+#userInput{
+  background-color: white;
+}
 
 .card{
   padding:.5cm;
   background-color: rgb(251, 253, 209);
+}
+
+#instructions{
+  background-color: rgb(251, 253, 209);
+  margin: auto;
 }
 
 #button{
@@ -62,6 +73,11 @@ body {
   background-color: #eccdf7;
   transition:.2s;
 }
+
+/* #storyContainer{
+  background-color: white;
+} */
+
 
 .footer{
   left: 0;

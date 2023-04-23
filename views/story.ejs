@@ -23,12 +23,30 @@
 <!-- partial:index.partial.html -->
 <!-- from user learn43 -->
 
-<div class="container">
+
+
+    <form method="GET" action="/statusPage">
+      <input type="submit" value="Check your status" />
+    </form>
+    <br>
+    <form method="GET" action="/">
+      <input type="submit" value="Back to start page" />
+    </form>
+    <br>
+
+    
+
+<div id="storyContainer" class="container">
+  <div class="col-md-8 offset-md-2">
 
 <div class="row">
 <div id="sleep" class="step">
 
   <h1>Welcome  we have a full day ahead!</h1>
+  <div id="instructions" class="card">
+  <p>Story process: Please look at the prompt and chose your won adventure! You will be able to find 2 secrets about campus. When you find a secret, you can click the see status button to add your secret or continue on.</p>
+  </div>
+  <br>
 
   <p>Do you want to start your day?</p>
 
@@ -37,9 +55,7 @@
   <!-- <button onclick="StartFunction()">Kristina</button> -->
   <a href="#sleep">Sleep a little more</a>
   <br>
-  <form method="GET" action="/rachelPage">
-    <input type="submit" value="Next Adventure!" />
-  </form>
+
 </div>
 </div>
 
@@ -58,13 +74,50 @@
 <div class="row">
 <div id="fountain" class="step" data-x="0" data-y="-1500" data-z="1500" style="height: 100%">
   <H1>We made it to the fountain!</h1>
-  <p>He will help you find all the Dragonballs!</p>
+  <p>Would you like to see Leo or do the lucky dip?</p>
 
-  <a href="#oak">Okay! Go See Professor Oak</a>
-  <a href="#sleep">Go back to your dorm</a>
+  <a href="#leo">Leo!!</a>
+  <a href="#lucky">Lucky dip, need all the luck I can get</a>
 
 </div>
 </div>
+
+<!-- leo choice -->
+<div class="row">
+  <div id="leo" class="step" data-x="0" data-y="-1500" data-z="1500" style="height: 100%">
+      <H1>Leo is very happy to see someone!</h1>
+      <p>He says thank you for visiting, here is a quick campus secret!</p>
+    
+      <a href="#sleep">Start over</a>
+      <form method="GET" action="/statusPage">
+        <input type="submit" value="Update my secrets" />
+      </form>
+      <form method="GET" action="/">
+         <br>
+        <input type="submit" value="Back home" />
+        </form>
+    
+    </div>
+    </div>
+
+<!-- lucky dip choice -->
+    <div class="row">
+      <div id="lucky" class="step" data-x="0" data-y="-1500" data-z="1500" style="height: 100%">
+        <H1>The lucky dip was fun!!</h1>
+        <p>Time to head to class, here's a quick campus tip!</p>
+    
+        <a href="#sleep">Start over</a>
+        <form method="GET" action="/statusPage">
+          <input type="submit" value="Update my secrets" />
+        </form>
+        <form method="GET" action="/">
+           <br>
+          <input type="submit" value="Back home" />
+          </form>
+        
+    
+      </div>
+    </div>
 
 <!-- GUC choice -->
 <div class="row">
@@ -102,26 +155,28 @@
   </div>
   </div>
 
+  <!-- <button onclick="showSecret()">Secret1</button>
+
+  <div id="myDiv">
+    This is my DIV element.
+    </div> -->
+
 <!-- panda choice -->
 <div class="row">
 <div id="givecookie" class="step" style="height: 100%">
   <h1>Looks like he is very grateful!</h1>
-  <p>The squirrel was very friendly and gave us a campus secret!</p>
+  <p>The squirrel was very friendly and gave us a campus secret!
+  </p>
+ 
 
   <a href="#sleep">Start over</a>
-  <form method="GET" action="/rachelPage">
-    <br>
-
-    <% for (var i=0; i< nameData.length; i++ ) { %>
-      <form method="POST" action="/updateSecret/<%= nameData[i]._id %>" style="display: inline-block">  
-        <%= nameData[i].name %> (<%= nameData[i].size %>) 
-        <input type="submit" value="update your secret"> 
-      </form>
-      <br/>
-     <% } %>
-     <br>
-    <input type="submit" value="Next Adventure!" />
+  <form method="GET" action="/statusPage">
+    <input type="submit" value="Update my secrets" />
   </form>
+  <form method="GET" action="/">
+     <br>
+    <input type="submit" value="Back home" />
+    </form>
 </div>
 </div>
 
@@ -132,9 +187,9 @@
     
     <a href="#panda">On second thought, he deserves the cookie.</a>
     <a href="#pika">No, I still don't trust him</a>
-    <form method="GET" action="/rachelPage">
+    <!-- <form method="GET" action="/rachelPage">
       <input type="submit" value="Next Adventure!" />
-    </form>
+    </form> -->
   </div>
   </div>
 
@@ -145,23 +200,18 @@
     <p>""</p>
   
     <a href="#sleep">Start over</a>
-<!--  -->
+    <form method="GET" action="/statusPage">
+      <input type="submit" value="Update my secrets" />
+    </form>
+    <form method="GET" action="/">
+       <br>
+      <input type="submit" value="Back home" />
+      </form>
 
     
-      <br>
-      <br>
-<form>
-      <% for (var i=0; i< nameData.length; i++ ) { %>
-        <form method="POST" action="/updateSecret/<%= nameData[i]._id %>" style="display: inline-block">  
-          <%= nameData[i].name %> (<%= nameData[i].size %>) 
-          <input type="submit" value="update your secret"> 
-        </form>
-        <br/>
-       <% } %>
+      
        <br>
-       <form method="GET" action="/rachelPage">
-        <input type="submit" value="Next Adventure!" />
-      </form>
+
       
     </form>
   
@@ -175,50 +225,17 @@
   
     <a href="#moes">Maybe he doesn't seem so bad?</a>
     <a href="#sleep">Go back to your dorm</a>
-    <form method="GET" action="/rachelPage">
-      <input type="submit" value="Next Adventure!" />
-    </form>
+
   
   </div>
   </div>
 
-<!-- closing the container -->
+<!-- closing the container and col -->
+</div>
 </div>
 
 
-  <!-- <h3>Add your secret to the database</h3> 
-<% for (var i=0; i< nameData.length; i++ ) { %>
- <form method="POST" action="/updateSecret/<%= nameData[i]._id %>" style="display: inline-block">  
-   <%= nameData[i].name %> (<%= nameData[i].size %>) 
-   <input type="submit" value="update"> 
- </form>
- <br/>
-<% } %> -->
-
-<!-- <div id="pika">
-  <h1>I think there is one more Pokemon..</h1>
-  <p>Here is one more Pokeball. But I must warn you he is a fiesty little fella</p>
   
-  <a href="#open-pika">Open Pokeball</a>
-    <a href="#panda">Nah.</a>
-</div>
-
-<div id="open-pika">
-  <h1>Pikachu!</h1>
-  <p>Congratuations! You recieved a Lv 5 Pikachu! Fork this pen to continue the adventure!</p>
-  
-  <a href="#sleep">Start over</a>
-</div>
-
-<div id="grass">
-  <h1>You recieved Bulbasaur</h1>
-  <P> Go grass type! I hope we don't enounter a Charmander..</p>
-  
-  <a href="#leave-town">Start our journey as a Pokemon trainer</a>
-</div> -->
-
-
-<!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js'></script>
 <script src="./app.js"></script>

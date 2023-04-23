@@ -124,7 +124,7 @@ app.get('/statusPage', async (req, res) => {
 app.post('/deleteName/:id', async (req, res) => {
 
   try {
-    console.log("req.parms.id: ", req.params.id) 
+    //console.log("req.parms.id: ", req.params.id) 
     
     client.connect; 
     const collection = client.db("unaAdventures").collection("user-info");
@@ -132,11 +132,10 @@ app.post('/deleteName/:id', async (req, res) => {
       {
         "_id": new ObjectId(req.params.id)
       }
-
+      
     )
-    .then(result => {
-      console.log(result); 
-      res.redirect('/status');
+    .then(result => { 
+      res.redirect('/');
     })
     .catch(error => console.error(error))
   }
@@ -152,7 +151,7 @@ app.post('/deleteName/:id', async (req, res) => {
   app.post('/updateSecret/', async (req, res) => {
 
     try {
-      console.log("req.body.id: ", req.body.id) 
+      //console.log("req.body.id: ", req.body.id) 
       console.log("req.body.newSecret: ", req.body.newSecret) 
   
       client.connect; 
@@ -174,6 +173,15 @@ app.post('/deleteName/:id', async (req, res) => {
     }
   
   })
+
+  // function showSecret() {
+  //   var secretBtn = document.getElementById("myDIV");
+  //   if (secretBtn.style.display === "none") {
+  //     secretBtn.style.display = "block";
+  //   } else {
+  //     secretBtn.style.display = "none";
+  //   }
+  // }
 
  
 
