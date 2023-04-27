@@ -5,12 +5,14 @@ const PORT = process.env.PORT || 3000;
 const bodyParser = require('body-parser')
 const { ObjectId } = require('mongodb')
 const { MongoClient, ServerApiVersion } = require('mongodb');
+const nodemailer = require('nodemailer')
 
 const path = require('path');
 // npm i path download!!^^
 
 
 const client = new MongoClient(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
+app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }))
 
 app.set('view engine', 'ejs');
@@ -171,6 +173,39 @@ app.post('/deleteName/:id', async (req, res) => {
     finally{
       //client.close()
     }
+  
+  })
+
+  app.post('/gmail', (req, res) => {
+
+    var transporter = nodemailer.createTransport({
+    service: 'gmail',
+    //host: 'smtp.gmail.com',
+    //port: 465,
+    //secure: true, // use SSL
+      auth: {
+        user: 'krisew10@gmail.com',
+        pass: process.env.APP_PWD
+      }
+    });
+  
+    var mailOptions = {
+      from: 'krisew10@gmail.com',
+      to: 'krisew10@gmail.com',
+      //3344059509@vtext.com
+      subject: 'Sending Email using Node.js',
+      text: 'Secret 1: You can park anywhere after 4:30 pm; Secret 2:'
+    };
+  
+    transporter.sendMail(mailOptions, function(error, info){
+      if (error) {
+        console.log(error);
+      } else {
+        console.log('Email sent: ' + info.response);
+      }
+    });
+
+    res.redirect('/');
   
   })
 
