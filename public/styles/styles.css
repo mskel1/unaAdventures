@@ -85,14 +85,10 @@ body {
 } */
 
 
-.footer{
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #f8dbff;
-  color: black;
-  text-align: center;
+.container {
+  width: auto;
+  max-width: 680px;
+  padding: 0 15px;
 }
 
 
