@@ -164,7 +164,7 @@ app.post('/deleteName/:id', async (req, res) => {
 
       .then(result => {
         // console.log(result); 
-        res.redirect('/status');
+        res.redirect('/statusPage');
         //return secret;
 
       })
@@ -180,9 +180,6 @@ app.post('/deleteName/:id', async (req, res) => {
 
     var transporter = nodemailer.createTransport({
     service: 'gmail',
-    //host: 'smtp.gmail.com',
-    //port: 465,
-    //secure: true, // use SSL
       auth: {
         user: 'krisew10@gmail.com',
         pass: process.env.APP_PWD
@@ -192,7 +189,7 @@ app.post('/deleteName/:id', async (req, res) => {
     var mailOptions = {
       from: 'krisew10@gmail.com',
       to: 'krisew10@gmail.com',
-      //3344059509@vtext.com
+      //3344059509@vtext.com for verizon
       subject: 'Sending Email using Node.js',
       text: 'Secret 1: You can park anywhere after 4:30 pm; Secret 2:'
     };
