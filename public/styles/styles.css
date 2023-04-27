@@ -86,8 +86,13 @@ body {
 
 
 .container {
-  width: 100%;
-  padding: 0 15px;
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: red;
+   color: black;
+   text-align: center;
 }
 
 
