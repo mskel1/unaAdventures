@@ -84,7 +84,7 @@ body {
   background-color: white;
 } */
 
-
+<style>
 .footer{
   position: fixed;
   left: 0;
@@ -94,6 +94,7 @@ body {
   color: black;
   text-align: center;
 }
+</style>
 
 
 
