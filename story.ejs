@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'>
+<link rel="stylesheet" href="/styles/styles.css">
+
+<!-- <link href="/styles/styles.css" rel="stylesheet" type="text/css"> -->
+
+<style>
+  div {
+    margin-bottom: 700px;
+  }
+
+</style>
+
+</head>
+
+
+<body>
+<!-- partial:index.partial.html -->
+<!-- from user learn43 -->
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container-fluid">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#navbarExample01"
+        aria-controls="navbarExample01"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarExample01">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item active">
+            <form method="GET" action="/statusPage">
+              <input type="submit" value="check your status" />
+            </form>
+            <br>
+          </li>
+          <li class="nav-item">
+            <form method="GET" action="/">
+              <input type="submit" value="back to start page" />
+            </form>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+    <form method="GET" action="/statusPage">
+      <input type="submit" value="check your status" />
+    </form>
+    <br>
+    <form method="GET" action="/">
+      <input type="submit" value="back to start page" />
+    </form>
+    <br>
+
+    
+
+<div id="storyContainer" class="container">
+  <div class="col-md-8 offset-md-2">
+
+<div class="row">
+<div id="sleep" class="step">
+
+  <h1>Welcome we have a full day ahead!</h1>
+  <div id="instructions" class="card">
+  <p>Story process: Please look at the prompt and chose your own adventure! You will be able to find 2 secrets about campus, 1 tip, and 1 quick secret! When you find a secret, you can click the "update my secrets" button to add your secret or continue on.</p>
+  </div>
+  <br>
+
+  <p>Do you want to start your day?</p>
+
+  <a href="#start">Let's go!</a>
+ 
+  <!-- <button onclick="StartFunction()">Kristina</button> -->
+  <a href="#sleep">Sleep a little more</a>
+  <br>
+
+</div>
+</div>
+
+<div class="row">
+<div id="start" class="step" data-x="0" data-y="-1500" style="height: 100%">
+  <p>You are walking on campus. Where will you go first: The fountain or the GUC</p>
+
+  <!-- <p><img src="http://static.tvtropes.org/pmwiki/pub/images/Delia_Ketchum_589.jpg"></p> -->
+
+  <a href="#fountain">The fountain!</a>
+  <a href="#guc">GUC</a>
+  <a href="#sleep">Go back to your dorm</a>
+</div>
+</div>
+
+<div class="row">
+<div id="fountain" class="step" data-x="0" data-y="-1500" data-z="1500" style="height: 100%">
+  <H1>We made it to the fountain!</h1>
+  <p>Would you like to see Leo or do the lucky dip?</p>
+
+  <a href="#leo">Leo!!</a>
+  <a href="#lucky">Lucky dip, need all the luck I can get</a>
+
+</div>
+</div>
+
+<!-- leo choice -->
+<div class="row">
+  <div id="leo" class="step" data-x="0" data-y="-1500" data-z="1500" style="height: 100%">
+      <H1>Leo is very happy to see someone!</h1>
+      <p>He says thank you for visiting, here is a quick way to support our lions!</p>
+      <p>"Check out the athletic page to stay up to date with games!"
+        <a href="http://www.roarlions.com/calendar" target="_blank">Athletics</a>
+      </p>
+    
+      <a href="#sleep">Start over</a>
+      <form method="GET" action="/statusPage">
+        <input type="submit" value="update my secrets" />
+      </form>
+      <form method="GET" action="/">
+         <br>
+        <input type="submit" value="back home" />
+        </form>
+    
+    </div>
+    </div>
+
+<!-- lucky dip choice -->
+    <div class="row">
+      <div id="lucky" class="step" data-x="0" data-y="-1500" data-z="1500" style="height: 100%">
+        <H1>The lucky dip was fun!!</h1>
+        <p>Time to head to class, here's a quick campus tip!</p>
+        <p>When heading to class on the first day, get there early to grab the seat you want! (sitting in the front is not that scary!)</p>
+    
+        <a href="#sleep">Start over</a>
+        <form method="GET" action="/statusPage">
+          <input type="submit" value="update my secrets" />
+        </form>
+        <form method="GET" action="/">
+           <br>
+          <input type="submit" value="back home" />
+          </form>
+        
+    
+      </div>
+    </div>
+
+<!-- GUC choice -->
+<div class="row">
+<div id="guc" class="step" data-x="0" data-y="-1500" data-z="1500" style="height: 100%">
+    <H1>Oooh I'm hungry, are you?</h1>
+    <p>Should we eat panda express or moes?</p>
+  
+    <a href="#panda"><img src="/photos/panda.png" id="logo"></a>
+    <a href="#moes"><img src="/photos/moes.png" id="logo"></a>
+    <a href="#sleep">Go back to your dorm</a>
+  
+  </div>
+  </div>
+
+  <div class="row"> 
+<div id="panda" class="step" data-x="850" data-y="3000" data-z="1000" data-rotate="90" style="height: 100%">
+  <H1>Panda Express was a great choice!</h1>
+    <p>Oh, it looks like there is a squirrel who wants a piece of our fortune cookie. Do you want to give him some?</p>
+
+  <a href="#givecookie">Yes he looks friendly!</a>
+  <a href="#ignore">No, more will come</a>
+  <a href="#sleep">Go back to your dorm</a>
+</div>
+</div>
+
+<div class="row">
+<div id="moes" class="step" data-x="0" data-y="-1500" data-z="1500" style="height: 100%">
+    <H1>Moes was a good choice!</h1>
+    <p>Wait... is that a raccoon? He looks like he wants to tell us something, do you trust him?</p>
+  
+    <a href="#trust">Yes of course, I always trust raccoons</a>
+    <a href="#sus">No, he looks super sus</a>
+    <a href="#sleep">Go back to your dorm</a>
+  
+  </div>
+  </div>
+
+  <!-- <button onclick="showSecret()">Secret1</button>
+
+  <div id="myDiv">
+    This is my DIV element.
+    </div> -->
+
+<!-- panda choice -->
+<div class="row">
+<div id="givecookie" class="step" style="height: 100%">
+  <h1>Looks like he is very grateful!</h1>
+  <p>The squirrel was very friendly and gave us a campus secret!
+  </p>
+  <p>"If you are trying to get somewhere on campus and don't want a ticket, you can park anywhere after 4:30!"</p>
+ 
+
+  <a href="#sleep">Start over</a>
+  
+  <form method="GET" action="/statusPage">
+    <input type="submit" value="update my secrets" />
+  </form>
+  <form method="GET" action="/">
+     <br>
+    <input type="submit" value="back home" />
+    </form>
+</div>
+</div>
+
+<div class="row">
+<div id="ignore" class="step" style="height: 100%">
+    <h1>Now the squirrel is sad :[</h1>
+    <p>We did not find a campus secret. Should we reconsider our cookie?</p>
+    
+    <a href="#givecookie">On second thought, he deserves the cookie.</a>
+    <a href="#sleep">No, I still don't trust him</a>
+
+    <form method="GET" action="/">
+       <br>
+      <input type="submit" value="back home" />
+      </form>
+  </div>
+  </div>
+
+  <!-- moes choice -->
+  <div class="row"> 
+  <div id="trust" class="step" data-x="0" data-y="-1500" data-z="1500" style="height: 100%">
+    <h1>Turns out raccoons love cheese dip! He is very grateful and gave us a campus secret! </h1>
+    <p>"The BCM gies $2 lunches on Wednesdays from 11-1! (first meal is free!)"</p>
+  
+    <a href="#sleep">Start over</a>
+    <form method="GET" action="/statusPage">
+      <input type="submit" value="update my secrets" />
+    </form>
+    <form method="GET" action="/">
+       <br>
+      <input type="submit" value="back home" />
+      </form>
+
+    
+      
+       <br>
+
+      
+    </form>
+  
+  </div>
+  </div>
+
+<div class="row">
+  <div id="sus" class="step" data-x="0" data-y="-1500" data-z="1500" style="height: 100%">
+    <H1>Too bad, we will never know if he had a secret to tell us.</h1>
+    <p>Should we try again?</p>
+  
+    <a href="#moes">Maybe he doesn't seem so bad?</a>
+    <a href="#sleep">Start over</a>
+
+    <form method="GET" action="/">
+       <br>
+      <input type="submit" value="back home" />
+      </form>
+
+  
+  </div>
+  </div>
+
+   
+
+<!-- closing the container and col -->
+</div>
+</div>
+
+
+  
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js'></script>
+<script src="./app.js"></script>
+</body>
+</html>
