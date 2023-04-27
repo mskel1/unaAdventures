@@ -10,20 +10,18 @@
 <link rel="stylesheet" href="/styles/styles.css">
 <!-- <link rel="stylesheet" href="/styles/styles.css"> -->
 
+<nav class="navbar navbar-light bg-light">
+  <form class="form-inline" method="GET" action="/indexPage">
+    <input type="submit" value="go back home" />
+  </form>
+  <form class="form-inline" method="GET" action="/storyPage">
+    <input type="submit" value="back to the story" />
+  </form>
+</nav>
+
 </head>
 
 <body class="container">
-
-
-    <form method="GET" action="/indexPage">
-        <input type="submit" value="go back home" />
-      </form>
-      <br>
-      <form method="GET" action="/storyPage">
-        <input type="submit" value="back to the story" />
-      </form>
-
-      <br>
       <div class="row">
         <p>Send your secrets via text! Please type in your number below!</p>
         <form method="POST" action="/gmail">
