@@ -21,6 +21,21 @@ body {
     height: 100%;
   }  */
 
+.navbar{
+  background-color: #f8dbff;
+  margin-bottom: .5cm;
+  padding: .3cm;
+}
+
+input[type=submit]{
+  background-color: #9e02c9;
+  color: white;
+}
+
+input[type=submit]:hover{
+  background-color: #c957f3;
+}
+
   a:link, a:visited {
     /* background-color: #f436de; */
     color: rgb(3, 3, 3);
@@ -31,7 +46,7 @@ body {
   }
   
   a:hover, a:active {
-    background-color: rgb(130, 1, 165);
+    background-color: #8201a5;
   }
 
 #campus{
@@ -44,10 +59,6 @@ body {
   width: 2.5cm;
 }
 
-/* input{
-  background-color: rgb(130, 1, 165);
-  color:white;
-} */
 
 #userInput{
   background-color: white;
@@ -69,29 +80,26 @@ body {
 }
 
 #button{
-  background-color: rgb(130, 1, 165);
+  background-color: #9e02c9;
   border:rgb(130, 1, 165);
   margin: .2cm;
 }
 
 
 #button:hover {
-  background-color: #eccdf7;
+  background-color: #c957f3;
   transition:.2s;
 }
 
-/* #storyContainer{
-  background-color: white;
-} */
-
 
 .container {
-   position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   color: black;
-   text-align: center;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: black;
+  text-align: center;
 }
+
 
 
