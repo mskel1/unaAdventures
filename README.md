@@ -58,7 +58,7 @@
 - display the full story at the end for the user to see??
 
 ## Useful links
-- Project board https://github.com/users/mskel1/projects/1 
+- Project board <a href="https://github.com/users/mskel1/projects/1"></a> 
 - Wiki page https://github.com/mskel1/unaAdventures/wiki 
    * resources and references https://github.com/mskel1/unaAdventures/wiki/Reources-References
    * meet our team https://github.com/mskel1/unaAdventures/wiki/meet-the-devs
