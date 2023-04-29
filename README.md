@@ -58,13 +58,12 @@
 - display the full story at the end for the user to see??
 
 ## Useful links
-- Project board <a href="https://github.com/users/mskel1/projects/1">Project board</a> 
-- Wiki page https://github.com/mskel1/unaAdventures/wiki 
-   * resources and references https://github.com/mskel1/unaAdventures/wiki/Reources-References
-   * meet our team https://github.com/mskel1/unaAdventures/wiki/meet-the-devs
-   * database setup https://github.com/mskel1/unaAdventures/wiki/MONGODB-setup
-- Github pages https://mskel1.github.io/unaAdventures/
-- Render page https://una-campus-adventures.onrender.com
+- <a href="https://github.com/users/mskel1/projects/1" target="_blank">Project board</a> 
+- <a href="https://github.com/mskel1/unaAdventures/wiki" target="_blank"> Wiki page </a> 
+   * <a href="https://github.com/mskel1/unaAdventures/wiki/Reources-References" target="_blank"> resources and references </a>
+   * <a href="https://github.com/mskel1/unaAdventures/wiki/meet-the-devs" target="_blank"> meet our team </a>
+   * <a href ="https://github.com/mskel1/unaAdventures/wiki/MONGODB-setup" target="_blank"> database setup </a>
+- <a href ="https://una-campus-adventures.onrender.com target="_blank"> Render page </a>
    
 
 story example
