@@ -178,7 +178,19 @@ app.post('/deleteName/:id', async (req, res) => {
 
   app.post('/gmail', (req, res) => {
 
-    var transporter = nodemailer.createTransport({
+    let request = req.body; 
+    let atCarrier = ''; 
+  
+    switch (request.carrier) {
+      case 'att':
+        atCarrier = "@txt.att.net";
+        break;
+      case 'verizon':
+        atCarrier = "@vtext.com	";
+        break;
+    }
+
+    let transporter = nodemailer.createTransport({
     service: 'gmail',
       auth: {
         user: 'krisew10@gmail.com',
@@ -188,10 +200,9 @@ app.post('/deleteName/:id', async (req, res) => {
   
     var mailOptions = {
       from: 'krisew10@gmail.com',
-      to: 'krisew10@gmail.com',
-      //3344059509@vtext.com for verizon
-      subject: 'Sending Email using Node.js',
-      text: 'Secret 1: You can park anywhere after 4:30 pm; Secret 2:'
+      to: request.phoneNumber + atCarrier, 
+      text: request.message,
+      subject: 'Sending Email using Node.js from unaAdventures app',
     };
   
     transporter.sendMail(mailOptions, function(error, info){

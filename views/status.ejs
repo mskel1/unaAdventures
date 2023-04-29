@@ -33,13 +33,31 @@
       </form> -->
 
       <br>
-      <div class="row">
+      <!-- <div class="row">
         <p>Send your secrets via text! Please type in your number below!</p>
         <form method="POST" action="/gmail">
           <input name="pwd" type="password">
           <button type="submit">submit</button>
       </form>
-      </div>
+      </div> -->
+
+
+      <div id="explain" class="row">
+        <div class="col-md-8 offset-md-2">
+        <p>Send your secrets via text! Please type in your number and then write any secrets you found that you'd like to keep!</p>
+      <form method="post" action="/gmail">
+        <input name="phoneNumber" type="text" placeholder="phone number">
+        <input name="message" type="textarea" placeholder="message">
+       <br><br>
+        <p>Please select which carrier you use below</p>
+        <input type="radio" id="att" name="carrier" value="att" checked>
+    <label for="att">AT&T</label><br>
+    <input type="radio" id="verizon" name="carrier" value="verizon">
+    <label for="verizon">Verizon</label><br><br>
+        <button type="submit">submit</button>
+    </form>
+  </div>
+</div>
 
 <div class="row">
     <% for (var i=0; i< nameData.length; i++ ) { %>

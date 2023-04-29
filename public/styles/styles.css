@@ -43,6 +43,7 @@ input[type=submit]:hover{
     text-align: center;
     text-decoration: none;
     display: inline-block;
+    margin-bottom: .3cm;
   }
   
   a:hover, a:active {
