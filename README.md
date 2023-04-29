@@ -63,7 +63,7 @@
    * <a href="https://github.com/mskel1/unaAdventures/wiki/Reources-References" target="_blank"> resources and references </a>
    * <a href="https://github.com/mskel1/unaAdventures/wiki/meet-the-devs" target="_blank"> meet our team </a>
    * <a href ="https://github.com/mskel1/unaAdventures/wiki/MONGODB-setup" target="_blank"> database setup </a>
-- <a href ="https://una-campus-adventures.onrender.com target="_blank"> Render page </a>
+- <a href ="https://una-campus-adventures.onrender.com" target="_blank"> Render page </a>
    
 
 story example
